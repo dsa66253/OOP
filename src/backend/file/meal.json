@@ -1,0 +1,26 @@
+[
+    {
+        "number": "1",
+        "code": "8787",
+        "sumPrice": "10000",
+        "dishMsg": "friedRice"
+    },
+    {
+        "number": "3",
+        "code": "123456789",
+        "sumPrice": "45",
+        "dishMsg": "滷蛋　　"
+    },
+    {
+        "number": "1",
+        "code": "123455679",
+        "sumPrice": "75",
+        "dishMsg": "排骨便當"
+    },
+    {
+        "number": "2",
+        "code": "r09525126",
+        "sumPrice": "170",
+        "dishMsg": "雞腿便當"
+    }
+]

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="zh-Hant-TW" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="zh-Hant-TW" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh-Hant-TW">
+<!--<![endif]-->
+
+<head>
+    <title>鄉鎮預報 | 交通部中央氣象局</title>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!--Facebook_meta_begin-->
+    <!-- Facebook -->
+    <meta content="https://www.cwb.gov.tw/V8/C/W/Town/Town.html" property="og:url">
+    <meta content="鄉鎮預報 - 中央氣象局全球資訊網" property="og:title">
+    <meta content="https://www.cwb.gov.tw/Data/fcst_img/FI04.png?" property="og:image">
+    <meta content="image/jpg" property="og:image:type">
+    <meta content="鄉鎮預報" property="og:description" />
+    <meta content="中央氣象局全球資訊網" property="og:site_name" />
+    <!--Facebook_meta_end-->
+    <!--tw.gov_meta_begin-->
+    <meta content="交通部中央氣象局" name="DC.Creator" />
+    <meta content="交通部中央氣象局" name="DC.Contributor" />
+    <meta content="服務" name="DC.Type" />
+    <meta content="text" name="DC.Format" />
+    <meta content="交通部中央氣象局" name="DC.Source" />
+    <meta content="中文" name="DC.Language" />
+    <meta content="2021-06-07" name="DC.coverage.t.min" />
+    <meta content="2026-06-07" name="DC.coverage.t.max" />
+    <meta content="交通部中央氣象局" name="DC.Publisher" />
+    <meta content="2021-06-07 10:36" name="DC.Date" />
+    <meta content="315070000H" name="DC.Identifier" />
+    <meta content="" name="DC.Relation" />
+    <meta content="交通部中央氣象局" name="DC.Rights" />
+    <meta content="650" name="Category.Theme" />
+    <meta content="CM0" name="Category.Cake" />
+    <meta content="EZ0" name="Category.Service" />
+    <meta content="中央氣象局全球資訊網" name="DC.Title" />
+    <meta content="天氣" name="DC.Subject" />
+    <meta content="鄉鎮預報" name="DC.Description" />
+    <meta
+        content="鄉鎮預報,縣市,預報,天氣,氣象,即時影像,天氣現況,溫度,體感溫度,降雨機率,時雨量,風力,風級,風速,風向,相對溼度,紫外線,舒適度,一周天氣預報,一周預報,逐3小時天氣預報,逐3小時,鄉鎮潮汐預報,日出日沒"
+        name="Keywords" />
+    <!--tw.gov_meta_end-->
+    <link href="/V8/assets/plugins/dialog/alert.css" rel="stylesheet" />
+    <link href="/V8/assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <!--common_css_begin-->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="中央氣象局" name="application-name" />
+    <meta content="/V8/assets/img/win10/cwbPinlogo.png" name="msapplication-TileImage" />
+    <meta content="/V8/assets/img/win10/cwbPinlogo70.png" name="msapplication-square70x70logo" />
+    <meta content="/V8/assets/img/win10/cwbPinlogo150.png" name="msapplication-square150x150logo" />
+    <meta content="/V8/assets/img/win10/cwbPinlogo310.png" name="msapplication-square310x310logo" />
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link href="/V8/assets/plugins/bootstrap/css/bootstrap.min.css?v=20191223" rel="stylesheet" />
+    <link href="/V8/assets/plugins/font-awesome/css/font-awesome.min.css?v=20191223" rel="stylesheet" />
+    <link href="/V8/assets/plugins/cwb-fonticon/style.css?v=20201208-3" rel="stylesheet" />
+    <link href="/V8/assets/plugins/plugins.css?v=20191223" rel="stylesheet" />
+    <link href="/V8/assets/css/main.css?v=20201224" rel="stylesheet" />
+    <!--common_css_end-->
+    <link href="/V8/assets/css/main-map.css?v=20201224" rel="stylesheet" />
+    <!-- =============== CSS Customization =============== -->
+    <link href="/V8/assets/css/town/TPE/map.css?" id="MapCSS" rel="stylesheet" />
+    <!-- <style>@media (max-width: 992px){form[name="form1"]{width:100%}.area_search-v9{height:75px}.area_search-v9.is_open{height:auto}}</style> -->
+    <style>
+        @media screen and (max-width:767px) and (-ms-high-contrast: none),
+        (-ms-high-contrast: active) {
+            #open_search label {
+                transform: translateY(-20px);
+            }
+
+            .countryselect-title label {
+                transform: translateY(-12px);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .area_search_place::before {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 30px;
+                background-color: #767676;
+            }
+        }
+    </style>
+    </meta>
+    </meta>
+    </meta>
+    </meta>
+</head>
+
+<body class="townBody">
+    <a class="focusable" href="#center-content" tabindex="1" title="跳到主要內容區塊">跳到主要內容區塊</a>
+    <noscript>
+        <h2>您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態。</h2>
+        <a href="/V8/C/sitemap.html" style="font-size:1.2rem;" target="_self" title="可點此前往">網站導覽</a>
+    </noscript>
+    <!--=== [START] Header ===-->
+    <header class="header" id="header"></header>
+    <!--=== [END] Header ===-->
+    <!--=== [START] Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a accesskey="C" class="acc" href="#center-content" id="center-content" title=":::中間內容區導盲磚">:::</a>
+            <ul class="pull-right breadcrumb breadcrumb-left">
+                <li><a aria-label="首頁" href="/V8/C/index.html" target="_self"><i aria-hidden="true" class="fa fa-home"
+                            title="首頁"></i></a></li>
+                <li>天氣</li>
+                <li><a href="/V8/C/W/Town/index.html" target="_self" title="鄉鎮預報">鄉鎮預報</a></li>
+                <!-- <li><a href="/V8/C/W/Town/Map_63.html" title="臺北市" target="_self" id="CountyName">臺北市</a></li> -->
+                <li id="PageTitle"></li>
+            </ul>
+        </div>
+    </div>
+    <!--=== [END] Breadcrumbs ===-->
+    <div class="wrapper">
+        <main class="main-content">
+            <div class="row">
+                <div class="col-lg-5">
+                    <!-- [START] Page title -->
+                    <div class="main-title-bar">
+                        <div>
+                            <h2 class="main-title"><i aria-hidden="true" class="icon-cwb-temperature"></i>鄉鎮預報 - 臺北市中正區
+                            </h2>
+                        </div>
+                    </div>
+                    <!-- [END] Page title -->
+                    <a class="btn btn-link btn-back hidden-xs" href="/V8/C/W/Town/index.html" target="_self"
+                        title="回全臺總覽">
+                        <i aria-hidden="true" class="fa fa-arrow-left"></i>
+                        <span>回全臺總覽</span>
+                    </a>
+                    <!-- [START] 地圖 -->
+                    <div class="map-wrapper">
+                        <div class="map_theme full_map" id="theme-1">
+                            <div class="weather_time"></div>
+                            <div class="weather_info"><i aria-hidden="true" class="icon-warn"></i>點擊地圖看各鄉鎮市區</div>
+                            <div class="weather_data"></div>
+                            <script></script><svg></svg>
+                        </div>
+                    </div>
+                    <!-- [END] 地圖 -->
+                    <!-- [START] 分區警特報 -->
+                    <div class="wraning-wrapper pull-right">
+                        <!-- [RJ] if col-lg then removeClass pull-right -->
+                        <h3 class="heading-title type_3 hidden-md hidden-sm hidden-xs">臺北市中正區</h3>
+                        <div class="warning_cube">
+                            <ul class="list-unstyled"></ul>
+                        </div>
+                    </div>
+                    <!-- [END] 分區警特報 -->
+                    <table class="table cubeV9-table pc">
+                        <thead>
+                            <tr>
+                                <td><i class="icon-cwb-clock" title="資料時間"></i></td>
+                                <td><i class="icon-cwb-temperature" title="溫度"></i></td>
+                                <td><i class="icon-somatosensory" title="體感溫度"></i></td>
+                                <td><i class="icon-humidity" title="相對溼度"></i></td>
+                                <td><i class="icon-cwb-raindrop" title="時雨量"></i></td>
+                                <td><i class="icon-cwb-sunrise" title="日出"></i></td>
+                                <td><i class="icon-cwb-sunset" title="日沒"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="col">資料<br />時間</th>
+                                <th scope="col">溫度</th>
+                                <th scope="col">體感<br />溫度</th>
+                                <th scope="col">相對<br />溼度</th>
+                                <th scope="col">時雨量</th>
+                                <th scope="col">日出</th>
+                                <th scope="col">日沒</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="GT_Time"></span></td>
+                                <td><span class="GT_T"></span></td>
+                                <td><span class="GT_AT"></span></td>
+                                <td><span class="GT_RH"></span></td>
+                                <td><span class="GT_Rain"></span></td>
+                                <td><span class="GT_Sunrise"></span></td>
+                                <td><span class="GT_Sunset"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-12">
+                            <a class="marquee" data-target="#marquee" data-toggle="modal" href="#" id="marquee_1"
+                                role="button" title="更多內容：彈出畫面"></a>
+                            <!-- [START] 快速地點搜尋 -->
+                            <form action="/V8/C/W/Town/Town.html" name="form1">
+                                <fieldset>
+                                    <legend class="sr-only">快速地點搜尋</legend>
+                                    <div class="area_search-v9">
+                                        <div class="area_search_item-v9">
+                                            <div class="countryselect-title">
+                                                <label class="label" for="CountySelect">選擇</label>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex w-100">
+                                                    <div class="w-50">
+                                                        <label class="select w-100">
+                                                            <select aria-label="選擇縣市" class="form-control"
+                                                                id="CountySelect">
+                                                                <option disabled="" selected="" value="">選擇縣市</option>
+                                                            </select><i aria-hidden="true"></i>
+                                                        </label>
+                                                    </div>
+                                                    <div class="w-50">
+                                                        <label class="select w-100" for="TID">
+                                                            <select aria-label="選擇鄉鎮" class="form-control" id="TID"
+                                                                name="TID">
+                                                                <option disabled="" selected="" value="">選擇鄉鎮</option>
+                                                            </select><i aria-hidden="true"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="area_search_item-v9 area_search_place">
+                                            <div id="open_search">
+                                                <label class="label" for="QS">快速地點搜尋</label>
+                                            </div>
+                                            <div class="ui-widget">
+                                                <label class="input">
+                                                    <input autocomplete="off" class="ui-autocomplete-input form-control"
+                                                        id="QS" placeholder="請輸入關鍵字" type="text" />
+                                                </label>
+                                                <label class="hidden" for="PID"><input class="hidden" id="PID"
+                                                        name="PID" type="text" /></label>
+                                            </div>
+                                        </div>
+                                        <div class="area_search_btn-v9">
+                                            <button class="btn btn-default btn-block" type="button">確定</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <!-- [END] 快速地點搜尋 -->
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <!-- 資料時間表格 手機版 -->
+                            <div class="cubeV9-table sp">
+                                <div class="d-flex flex-wrap">
+                                    <div class="col-6 align-self-center">
+                                        <div class="d-flex text-center align-items-center">
+                                            <div class="col-4"><i class="icon-cwb-clock" title="資料時間"></i></div>
+                                            <div class="col-4">資料<br />時間</div>
+                                            <div class="col-4"><span class="GT_Time"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex">
+                                            <div class="col-6 text-center align-self-center border-left-solid">
+                                                <i class="icon-cwb-temperature" title="溫度"></i>溫度<br /><span
+                                                    class="GT_T"></span>
+                                            </div>
+                                            <div class="col-6 text-center align-self-center border-left-solid">
+                                                <i class="icon-somatosensory" title="體感溫度"></i>體感溫度<br /><span
+                                                    class="GT_AT"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 border-top-solid">
+                                        <div class="d-flex">
+                                            <div class="col-6 text-center align-self-center">
+                                                <i class="icon-humidity" title="相對溼度"></i>相對溼度<br /><span
+                                                    class="GT_RH"></span>
+                                            </div>
+                                            <div class="col-6 text-center align-self-center border-left-solid">
+                                                <i class="icon-cwb-raindrop" title="時雨量"></i>時雨量<br /><span
+                                                    class="GT_Rain"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 border-top-solid">
+                                        <div class="d-flex">
+                                            <div class="col-6 text-center align-self-center border-left-solid">
+                                                <i class="icon-cwb-sunrise" title="日出"></i>日出<br /><span
+                                                    class="GT_Sunrise"></span>
+                                            </div>
+                                            <div class="col-6 text-center align-self-center border-left-solid">
+                                                <i class="icon-cwb-sunset" title="日沒"></i>日沒<br /><span
+                                                    class="GT_Sunset"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End 資料時間表格 手機版 -->
+                        </div>
+                    </div>
+                    <!--charts-->
+                    <div accesskey="T" id="div_chart" title="鄉鎮預報曲線圖">
+                        <h3 class="heading-title type_7" id="tab_chart">
+                            <a class="anchor tab_hr active" data-tab="3hr" href="javascript:void(0)" id="Tab_3hr"
+                                title="逐三小時天氣詳細資料"><span>逐三小時預報</span></a>
+                            <a class="anchor tab_hr" data-tab="weeks" href="javascript:void(0)" id="Tab_weeks"
+                                title="一週溫度曲線"><span>一週溫度曲線</span></a>
+                            <a class="anchor tab_hr" data-tab="weeks_at" href="javascript:void(0)" id="Tab_body"
+                                title="一週體感溫度曲線"><span>一週體感溫度曲線</span></a>
+                            <a class="anchor tab_hr" data-tab="24hr" href="javascript:void(0)" id="Tab_24hr"
+                                title="過去24小時溫度曲線"><span>過去24小時</span></a>
+                        </h3>
+                        <div class="tempChart_ex visible-xs">
+                            <ul>
+                                <li class="ttem-C">溫度</li>
+                                <li class="ttem-C">體感溫度</li>
+                            </ul>
+                        </div>
+                        <div class="table-responsive">
+                            <div class="chart-md-scroll">
+                                <div id="chart_tem" style="min-width: 280px; margin: 0 auto">
+                                    <div class="" id="ChartId3hr"></div>
+                                    <div class="d-none" id="ChartIdweeks"></div>
+                                    <div class="d-none" id="ChartIdweeksbody"></div>
+                                    <div class="d-none" id="ChartId24hr"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end charts-->
+                    <!--table-->
+                    <div accesskey="K" id="div_table" title="鄉鎮預報表格">
+                        <h3 class="heading-title type_7 mt-4" id="tab_table">
+                            <a class="anchor tab_hr active" data-tab="3hr" href="javascript:void(0)" id="Tab_3hrTable"
+                                title="逐三小時天氣詳細資料"><span>逐三小時預報</span></a>
+                            <a class="anchor tab_hr" data-tab="weeks" href="javascript:void(0)" id="Tab_weeksTable"
+                                title="一週預報"><span>一週預報</span></a>
+                            <a class="anchor tab_hr" data-tab="24hr" href="javascript:void(0)" id="Tab_24hrTable"
+                                title="過去24小時詳細資料"><span>過去24小時</span></a>
+                        </h3>
+                        <div id="PC_week">
+                            <div class="table-responsive report-table pc grid_open">
+                                <table class="table table-bordered" id="TableId3hr"></table>
+                                <table class="table table-bordered d-none" id="TableIdweeks"></table>
+                                <table class="table table-bordered d-none" id="TableId24hr"></table>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div id="SP_week">
+                            <div class="report-table sp" id="TableSpId3hr">
+                                <div class="wrapper"></div>
+                                <button class="btn btn-block btn-ShowHide btn-default-r" title="看更多資料" type="button">
+                                </button>
+                            </div>
+                            <div class="report-table sp d-none" id="TableSpIdweeks">
+                                <div class="wrapper"></div>
+                                <button class="btn btn-block btn-ShowHide btn-default-r" title="看更多資料" type="button">
+                                    <i aria-hidden="true" class="fa fa-th-list"></i><span>展開</span>
+                                </button>
+                            </div>
+                            <div class="report-table sp d-none" id="TableSpId24hr">
+                                <div class="wrapper"></div>
+                                <button class="btn btn-block btn-ShowHide btn-default-r" title="看更多資料" type="button">
+                                    <i aria-hidden="true" class="fa fa-th-list"></i><span>展開</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end table-->
+                </div>
+                <!-- 即時影像 -->
+                <div class="clear-both"></div>
+                <div class="col-sm-6 col-lg-5" id="CCTV_MOD"></div>
+                <!-- 天氣圖資 -->
+                <div class="col-sm-6 col-lg-7">
+                    <section class="margin-top-50">
+                        <h3 class="heading-title type_2">天氣圖資</h3>
+                        <!-- Tab v3 -->
+                        <div class="tab-v6">
+                            <div class="row">
+                                <div class="col-lg-12" id="GRAPH_TAB">
+                                    <ul class="nav nav-pills" id="tab_graph">
+                                        <li class="active"><a data-toggle="tab" href="#t-1" title="衛星雲圖"><span>衛星<br
+                                                        class="visible hidden-lg" />雲圖</span></a></li>
+                                        <li><a data-toggle="tab" href="#t-2" title="雷達回波"><span>雷達<br
+                                                        class="visible hidden-lg" />回波</span></a></li>
+                                        <li><a data-toggle="tab" href="#t-3" title="累積雨量"><span>累積<br
+                                                        class="visible hidden-lg" />雨量</span></a></li>
+                                        <li><a data-toggle="tab" href="#t-4" title="溫度分布"><span>溫度<br
+                                                        class="visible hidden-lg" />分布</span></a></li>
+                                        <li><a data-toggle="tab" href="#t-5" title="即時閃電"><span>即時<br
+                                                        class="visible hidden-lg" />閃電</span></a></li>
+                                        <li><a data-toggle="tab" href="#t-6" title="紫外線"><span>紫外線</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-12 mt-3">
+                                    <div class="tab-content" id="ContentTable2">
+                                        <div class="tab-pane fade in active" id="t-1">
+                                            <a href="/V8/C/W/OBS_Sat.html" target="_self" title="衛星雲圖">衛星雲圖</a>
+                                        </div>
+                                        <div class="tab-pane fade in" id="t-2">
+                                            <a href="/V8/C/W/OBS_Radar.html" target="_self" title="雷達回波">雷達回波</a>
+                                        </div>
+                                        <div class="tab-pane fade in" id="t-3">
+                                            <a href="/V8/C/P/Rainfall/Rainfall_QZJ.html" target="_self"
+                                                title="累積雨量">累積雨量</a>
+                                        </div>
+                                        <div class="tab-pane fade in" id="t-4">
+                                            <a href="/V8/C/W/OBS_Temp.html" target="_self" title="溫度分布">溫度分布</a>
+                                        </div>
+                                        <div class="tab-pane fade in" id="t-5">
+                                            <a href="/V8/C/W/OBS_Lightning.html" target="_self" title="即時閃電">即時閃電</a>
+                                        </div>
+                                        <div class="tab-pane fade in" id="t-6">
+                                            <a href="/V8/C/W/OBS_UVI.html" target="_self" title="紫外線">紫外線</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab v3 -->
+                    </section>
+                </div>
+                <div class="clear-both"></div>
+                <!-- 附近旅遊景點天氣連結 -->
+                <div class="col-lg-12">
+                    <div class="margin-top-50 col-lg-12" id="Near"></div>
+                </div>
+                <!-- 潮汐預報 -->
+                <div class="col-lg-12" id="Tide_MOD">
+                    <section class="info_block margin-top-50">
+                        <h3 class="heading-title type_1">潮汐預報</h3>
+                    </section>
+                    <!-- 電腦版 -->
+                    <div class="tidal-wrapper pc"></div>
+                    <!-- 手機版 -->
+                    <div class="tidal-wrapper sp">
+                        <!-- <button type="button" class="btn btn-block btn-ShowHide btn-default-r" title="看更多">
+                            <i class="fa fa-th-list" aria-hidden="true"></i>
+                            <span>展開</span>
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!--/wrapper-->
+    <!-- Modal -->
+    <div aria-labelledby="marqueeLabel" class="modal fade" id="marquee" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="marqueeLabel">
+                <div class="modal-body" id="marquee_2"></div>
+                <div class="modal-footer">
+                    <button aria-label="關閉：彈出畫面" class="btn btn-primary" data-dismiss="modal" type="button">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+    <!--/container-->
+    <!-- End Content Part -->
+    <!--=== Footer ===-->
+    <footer class="footer-v3" id="footer-v3"></footer>
+    <!--=== End Footer ===-->
+    <!-- JS Global Compulsory -->
+    <!--common_js_begin-->
+    <script src="/Data/js/warn/Warning_Content.js?"></script>
+    <script src="/Data/js/info/Info_Warning.js?v=20200824"></script>
+    <script src="/Data/js/info/Info_County.js?v=20200415"></script>
+    <script src="/Data/js/info/Info_Town.js?v=20200817"></script>
+    <script src="/V8/assets/plugins/jquery/jquery-2.2.4.min.js"></script>
+    <script src="/V8/assets/plugins/jquery/jquery-migrate.min.js"></script>
+    <script src="/V8/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/V8/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/V8/assets/plugins/back-to-top.js"></script>
+    <script src="/V8/assets/plugins/smoothScroll.js"></script>
+    <script src="/V8/assets/js/cookie_lib.js?v=20201217"></script>
+    <script src="/V8/assets/js/function-global.js?v=20210302"></script>
+    <script src="/V8/assets/js/app.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-126485471-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-126485471-1');
+    </script>
+    <!--common_js_end-->
+    <!-- JS Customization -->
+    <script src="/Data/js/fcst/W50_Data.js?"></script>
+    <script src="/Data/js/info/Array_Town.js"></script>
+    <script>
+        var VER = "C"; var TID = "6300500"; var CID = "63";
+        var MapVer = '20200731'; var pageIndex = [0, 0, 0];
+        var pageTitle = ["#tab_chart >", "#tab_table >", "#tab_graph li"];
+        var pageSubs = [".chart-md-scroll", "#div_table", "#ContentTable2"];
+        jQuery(document).ready(function () {
+            App.init();
+        });
+    </script>
+    <!-- JS Get ID -->
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/modules/variwide.js"></script> -->
+    <script src="/HighCharts7/code/highcharts.js"></script>
+    <script src="/HighCharts7/code/modules/exporting.js"></script>
+    <script src="/HighCharts7/code/modules/variwide.js"></script>
+    <script src="/V8/assets/plugins/dialog/alert.min.js"></script>
+    <!-- <script src="/V8/assets/js/Town.js?v=20200305"></script> -->
+    <script src="/V8/assets/js/Town.v2.js?v=20210607"></script>
+    <!-- <script src="/V8/assets/js/chart/Town-Chart.js?v=20191119"></script> -->
+    <!-- <script src="/V8/assets/js/chart/Town-Chart-Tidal.js"></script> -->
+    <script src="/V8/assets/js/function-tab-jump.js?v=20200806"></script>
+    <!-- JS Page Level -->
+    <!--[if lt IE 9]>
+    <script src="/V8/assets/plugins/respond.js"></script>
+    <script src="/V8/assets/plugins/html5shiv.js"></script>
+    <script src="/V8/assets/plugins/placeholder-IE-fixes.js"></script>
+    <![endif]-->
+</body>
+
+</html>
